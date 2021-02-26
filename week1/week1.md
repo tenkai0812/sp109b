@@ -4,7 +4,7 @@
 從這可知道，組譯器、編譯器、虛擬機等等可稱作為system software，而office、adobe、browser則可稱作application software，但是如果是文字編輯器、資料庫管理這種軟體就不太能明確區分屬於system software 還是 application software了
 ## :book: 教學順序
 
-<img src = "./導引.jpg">
+<img src = ".\導引.jpg">
 
 ## 典型系統程式
 * 輸入/輸出套裝副程式（Input/Output Subroutine Packages）
