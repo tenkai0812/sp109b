@@ -27,5 +27,22 @@ BNF(Backus-Naur Form)是一種用於表示上下文無關文法的語言，上�
 為何這邊我們使用EBNF必較適合?原因是BNF會最基本的機體問題，凡是寫出左遞迴式，程式只會一直呼叫接下來就呼叫到當機。
 <img src = '.\bnfebnf.PNG'>
 
+## test
+[00-gen](./00-gen/gen.md)<br>
+[01-exp0](./01-exp0/exp0.md)<br>
 
+## 遞迴下降法
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br>
 🖊️editor:Sky Lien
