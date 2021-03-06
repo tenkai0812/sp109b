@@ -25,6 +25,7 @@ GCC 是開放原始碼 (open source) 的跨平台編譯器 (compiler) ，支援�
 ### GCC流程圖
 
 <img src = ".\GCC 執行流程圖.png">
+<img src = ".\流程.png">
 
 1. .c檔:編譯檔
 2. .o檔:目的檔
