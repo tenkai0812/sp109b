@@ -6,3 +6,9 @@
 <img src = './erf.PNG'>
 <br><br>
 <img src = './list.PNG'>
+
+## POSIX (Portable Operating System Interface)
+1. Base Definitions
+2. System Interfaces
+3. Shell and Utilities
+4. Rationale
