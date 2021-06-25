@@ -49,4 +49,25 @@ responseFile:fpath=./web/hello.html
 
 ```
 
-##
+### grep 
+<img src ='grep.PNG'>
+
+### popen1
+<img src ='popen.PNG'>
+
+### popen2
+<img src ='popen2.PNG'>
+
+### upperpipe
+<img src ='upper.PNG'>
+
+### pipe1
+<img src ='pipe1.PNG'>
+
+### pipe2
+<img src ='pipe2.PNG'>
+
+### fifo
+<img src ='fifo2.PNG'>
+
+<img src ='fifo1.PNG'>
