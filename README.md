@@ -12,21 +12,21 @@
 
 |期數|
 ----------------------
-|[week1](./week1/week1.md)<br>|
-|[week2](./week2/week2.md)<br>|
-|[week3](./week3/week3.md)<br>|
-|[week4](./week4/week4.md)<br>|
-|[week5](./week5/week5.md)<br>|
-|[week6](./week6/week6.md)<br>|
-|[week8](./week8/week8.md)<br>|
-|[week9](./week9/week9.md)<br>|
-|[week10](./week10/week10.md)<br>|
-|[week11](./week11/week11.md)<br>|
-|[week12](./week12/week12.md)<br>|
-|[week13](./week13/week13.md)<br>|
-|[week14](./week14/week14.md)<br>|
-|[week15](./week15/week15.md)<br>|
-|[week16](./week16/week16.md)<br>|
-|[week17](./week17/week17.md)<br>|
+|[week1](./week1/week1.md)|
+|[week2](./week2/week2.md)|
+|[week3](./week3/week3.md)|
+|[week4](./week4/week4.md)|
+|[week5](./week5/week5.md)|
+|[week6](./week6/week6.md)|
+|[week8](./week8/week8.md)|
+|[week9](./week9/week9.md)|
+|[week10](./week10/week10.md)|
+|[week11](./week11/week11.md)|
+|[week12](./week12/week12.md)|
+|[week13](./week13/week13.md)|
+|[week14](./week14/week14.md)|
+|[week15](./week15/week15.md)|
+|[week16](./week16/week16.md)|
+|[week17](./week17/week17.md)|
 |[week18](./week18/week18.md)|
 ## [授權聲明](./LICENSE.md)
