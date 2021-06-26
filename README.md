@@ -11,7 +11,7 @@
 教材網址 | [陳鍾誠的系統程式課程](http://programmermedia.org/root/%E9%99%B3%E9%8D%BE%E8%AA%A0/%E8%AA%B2%E7%A8%8B/%E7%B3%BB%E7%B5%B1%E7%A8%8B%E5%BC%8F/README.md)
 
 |期數|
-----------------------
+|----------------------|
 |[week1](./week1/week1.md)|
 |[week2](./week2/week2.md)|
 |[week3](./week3/week3.md)|
