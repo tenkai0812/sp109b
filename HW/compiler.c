@@ -5,8 +5,7 @@ int E();
 void STMT();
 void IF();
 void BLOCK();
-void FOR();
-
+void For();
 int tempIdx = 0, labelIdx = 0;
 
 #define nextTemp() (tempIdx++)
@@ -92,49 +91,41 @@ void WHILE() {
 
 // if (EXP) STMT (else STMT)?
 void IF() {
-  int ifBegin = nextLabel();
+  int ifBigin = nextLabel();//開始的label
   int ifMid = nextLabel();
-  int ifEnd = nextLabel();
-  emit("(L%d)\n", ifBegin);
+  int ifEnd = nextLabel();//結束的label
+  emit("(L%d)\n",ifBigin);
   skip("if");
   skip("(");
-  int e = E();
-  emit("if not T%d goto L%d\n", e, ifMid); //經if判斷不成立，到下一個條件式
+  int e= E();
+  emit("if not t%d goto L%d\n",e,ifMid);
   skip(")");
   STMT();
-  emit("goto L%d\n", ifEnd);  //條件成立，結束
-  emit("(L%d)\n", ifMid);  //第二個條件式
+  emit("goto L%d\n",ifEnd);
+  emit("(L%d)\n", ifMid);
   if (isNext("else")) {
     skip("else");
+    //emit("if L%d goto L%d\n",ifMid,ifEnd);
     STMT();
-    emit("goto L%d\n", ifEnd);  //條件成立，結束
+    emit("(L%d)\n",ifEnd);
   }
 }
-
-void FOR() {
-  int forBegin = nextLabel();
-  int forMid = nextLabel();
-  int forEnd = nextLabel();
-  emit("(L%d)\n", forBegin);
-  skip("for");   //跳過for
+void FOR() { 
+  int forBegin = nextLabel(); //開始的label
+  int forEnd = nextLabel();   //結束的label
+  emit("(L%d)\n",forBegin);
+  skip("for");
   skip("(");
-  ASSIGN();   //for裡面判斷式用的變數定義
-  int e2 = E();   //判斷式
-  emit("if not T%d goto L%d\n", e2, forEnd); //判斷不成立，跳出for迴圈
+  ASSIGN();                  //i = 0; 在這邊沒有skip(";");是因為在ASSUGN()這個函式中已經有做了
+  int e2 = E();              //i <= 10; 處理裡面的符號
+  emit("if not t%d goto L%d\n",e2,forEnd);
   skip(";");
-  isTempIr = 1;   //先給isTempIr = 1;
-  int e3 = E();   //先將i++的部分暫存
-  isTempIr = 0;   //這邊isTempIr = 0;下一次呼叫函數時就會印出來剛剛儲存的
-  char e3str[10000];
-  strcpy(e3str, tempIr);   //複製tempIr給e3str
+  int e3 = E();
   skip(")");
   STMT();
-  emit("%s\n", e3str);    //印出e1str(i++)
-  emit("goto L%d\n", forBegin);
-  emit("L%d", forEnd);
+  emit("goto L%d\n",forBegin);
+  emit("(L%d)\n",forEnd);
 }
-
-
 // STMT = WHILE | BLOCK | ASSIGN
 void STMT() {
   if (isNext("while"))
