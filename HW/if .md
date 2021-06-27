@@ -27,14 +27,13 @@ void IF() {
 PS C:\Users\rick2\sp109b\03b-compiler2> make
 gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
 PS C:\Users\rick2\sp109b\03b-compiler2> ./compiler test/if.c   
-if (a>3) {
+if (a>3) {      
   t=1;
 } else if(a<=0){
   t=2;
 } else{
   t=3;
 }
-
 ========== lex ==============
 token=if
 token=(
@@ -106,7 +105,7 @@ token=}
 t0 = a
 t1 = 3
 t2 = t0 > t1
-if not t2 goto L1
+if not T2 goto L1
 t3 = 1
 t = t3
 goto L2
@@ -115,7 +114,7 @@ goto L2
 t4 = a
 t5 = 0
 t6 = t4 <= t5
-if not t6 goto L4
+if not T6 goto L4
 t7 = 2
 t = t7
 goto L5

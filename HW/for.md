@@ -24,8 +24,8 @@ void FOR() {
 PS C:\Users\rick2\sp109b\03b-compiler2> make
 gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
 PS C:\Users\rick2\sp109b\03b-compiler2> ./compiler test/for.c
-for(i=0;i<=5;i++){
-        a=a+1;
+for(i=0; i<10; i++){
+    a = a + 1;
 }
 ========== lex ==============
 token=for
@@ -35,12 +35,12 @@ token==
 token=0
 token=;
 token=i
-token=<=
-token=5 
-token=; 
-token=i 
+token=<
+token=10
+token=;
+token=i
 token=++
-token=) 
+token=)
 token={
 token=a
 token==
@@ -57,8 +57,8 @@ token=}
 4:0
 5:;
 6:i
-7:<=
-8:5
+7:<
+8:10
 9:;
 10:i
 11:++
@@ -71,6 +71,23 @@ token=}
 18:1
 19:;
 20:}
+============ parse =============
+(L0)
+t0 = 0
+i = t0
+t1 = i
+t2 = 10
+t3 = t1 < t2
+if not T3 goto L1
+t5 = a
+t6 = 1
+t7 = t5 + t6
+a = t7
+i = i + 1
+t4 = i
+
+goto L0
+(L1)
 ============ parse =============
 compiler.c, line 36
 ```
