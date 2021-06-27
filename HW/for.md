@@ -20,6 +20,7 @@ void FOR() {
 ```
 
 ### result
+```
 PS C:\Users\rick2\sp109b\03b-compiler2> make
 gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
 PS C:\Users\rick2\sp109b\03b-compiler2> ./compiler test/for.c
@@ -72,3 +73,4 @@ token=}
 20:}
 ============ parse =============
 compiler.c, line 36
+```
