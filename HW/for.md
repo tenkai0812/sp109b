@@ -21,9 +21,12 @@ void FOR() {
 
 ### result
 ```
-PS C:\Users\rick2\sp109b\03b-compiler2> make
+sky@MSI MINGW64 ~/Desktop/VSCode  (GITHUB)/系統程式/sp109b/HW (main)
+$ make
 gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
-PS C:\Users\rick2\sp109b\03b-compiler2> ./compiler test/for.c
+
+sky@MSI MINGW64 ~/Desktop/VSCode  (GITHUB)/系統程式/sp109b/HW (main)
+$ ./compiler test/for.c
 for(i=0; i<10; i++){
     a = a + 1;
 }

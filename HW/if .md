@@ -24,9 +24,11 @@ void IF() {
 ```
 ### result
 ```
-PS C:\Users\rick2\sp109b\03b-compiler2> make
+sky@MSI MINGW64 ~/Desktop/VSCode  (GITHUB)/系統程式/sp109b/HW (main)
+$ make
 gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
-PS C:\Users\rick2\sp109b\03b-compiler2> ./compiler test/if.c   
+sky@MSI MINGW64 ~/Desktop/VSCode  (GITHUB)/系統程式/sp109b/HW (main)
+$ ./compiler test/if.c   
 if (a>3) {      
   t=1;
 } else if(a<=0){
