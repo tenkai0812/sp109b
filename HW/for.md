@@ -1,23 +1,35 @@
 ## FOR
 ### code
 ```
-void FOR() { 
-  int forBegin = nextLabel(); //開始的label
-  int forEnd = nextLabel();   //結束的label
-  emit("(L%d)\n",forBegin);
+void FOR(){
+  int ForBegin = nextLabel();
+  int ForEnd = nextLabel();
+  // 跳過for和(
   skip("for");
   skip("(");
-  ASSIGN();                  //i = 0; 
-  int e2 = E();              //i <= 10; 
-  emit("if not t%d goto L%d\n",e2,forEnd);
+  // a是初始項
+  int a = E();
   skip(";");
-  int e3 = E();
+  // 這裡是迴圈執行的起點
+  emit("(L%d)\n", ForBegin);
+  // b是條件項
+  int b = E();
+  skip(";");
+  emit("if T%d goto L%d\n", b, ForEnd);
+  isTempIr = 1;                
+  // c是循環項，先放著
+  int c = E();                
+  isTempIr = 0;                
+  char C[10000];
+  strcpy(C, tempIr);       
   skip(")");
+  // 取得執行項
   STMT();
-  emit("goto L%d\n",forBegin);
-  emit("(L%d)\n",forEnd);
+  // 印出c部分
+  emit("%s\n", C);        
+  emit("goto L%d\n", ForBegin);
+  emit("(L%d)\n",ForEnd);
 }
-```
 
 ### result
 ```

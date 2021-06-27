@@ -2,25 +2,28 @@
 ### code
 ```
 void IF() {
-  int ifBigin = nextLabel();//開始的label
+  int ifBegin = nextLabel();
+  int ifEnd = nextLabel();
   int ifMid = nextLabel();
-  int ifEnd = nextLabel();//結束的label
-  emit("(L%d)\n",ifBigin);
+  emit("(L%d)\n", ifBegin);
+  // 跳過if和(
   skip("if");
   skip("(");
-  int e= E();
-  emit("if not t%d goto L%d\n",e,ifMid);
+  // 取得條件項
+  int e = E();
+  emit("if not T%d goto L%d\n", e, ifMid);
   skip(")");
+  // 取得執行項
   STMT();
-  emit("goto L%d\n",ifEnd);
+  emit("goto L%d\n", ifEnd);
   emit("(L%d)\n", ifMid);
-  if (isNext("else")) {
+  if(isNext("else")){
     skip("else");
-    //emit("if L%d goto L%d\n",ifMid,ifEnd);
     STMT();
-    emit("(L%d)\n",ifEnd);
   }
+  emit("(L%d)\n", ifEnd);
 }
+
 ```
 ### result
 ```
